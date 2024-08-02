@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Validay</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @import url("https://fonts.googleapis.com/css2?family=Jost&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap");
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+      * {
+        font-family: "Inter", sans-serif;
+      }
+      #entrar {
+        font-family: "Jost", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="">
+    <!-- Header -->
+    <header class="flex justify-between items-center py-2 px-10 bg-[#9DB9E3]">
+      <img id="logo" class="w-32" src="/images/header/logo.png" alt=""/>
+    </header>
+    <main
+      class="bg-[url('/images/cadastro/fundo.png')] bg-cover bg-bottom h-screen flex justify-center items-center"
+    >
+      <!-- Caixa de cadastro -->
+      <div
+        class="shadow-2xl flex flex-col justify-center items-center bg-[#9DB9E3] rounded-lg text-[#F8F8F8] p-10 gap-5 transitionÇ"
+      >
+        <h5 class="font-bold text-4xl">Cadastrar no Validay</h5>
+        <!-- Formulário -->
+        <form action="">
+          <div class="flex flex-col gap-5">
+            <div class="flex items-center gap-2">
+              <!-- Input: Nome -->
+              <div class="flex flex-col gap-1">
+                <label for="nome">Nome</label>
+                <input
+                  class="bg-[#F5F5F5] w-22 rounded p-2 text-slate-700 placeholder:text-[#767676]"
+                  type="text"
+                  name="nome"
+                  id="nome"
+                  placeholder="Ex: Bruna"
+                  required
+                />
+              </div>
+              <!-- Input: Sobrenome -->
+              <div class="flex flex-col gap-1">
+                <label for="sobrenome">Sobrenome</label>
+                <input
+                  class="bg-[#F5F5F5] w-22 rounded p-2 placeholder:text-[#767676] text-slate-700"
+                  type="text"
+                  name="sobrenome"
+                  id="sobrenome"
+                  placeholder="Ex: Santos Silva"
+                  required
+                />
+              </div>
+            </div>
+            <div class="flex items-center gap-2">
+              <!-- Input: E-mail -->
+              <div class="flex flex-col gap-1">
+                <label for="email">E-mail</label>
+                <input
+                  class="bg-[#F5F5F5] w-22 rounded p-2 text-slate-700 placeholder:text-[#767676]"
+                  type="text"
+                  name="email"
+                  id="email"
+                  placeholder="Ex: meu.email@email.com"
+                  required
+                />
+              </div>
+              <!-- Input: Numero de telefone -->
+              <div class="flex flex-col gap-1">
+                <label for="telefone">N° de telefone</label>
+                <input
+                  class="bg-[#F5F5F5] w-22 rounded p-2 placeholder:text-[#767676] text-slate-700"
+                  type="number"
+                  name="telefone"
+                  id="telefone"
+                  placeholder="Ex: 11233334444"
+                  required
+                />
+              </div>
+            </div>
+            <div class="flex items-center gap-2">
+              <!-- Input: CPF -->
+              <div class="flex flex-col gap-1">
+                <label for="cpf-cnpj">CPF</label>
+                <input
+                  class="bg-[#F5F5F5] w-22 rounded p-2 placeholder:text-[#767676] text-slate-700"
+                  type="number"
+                  name="cpf-cnpj"
+                  id="cpf-cnpj"
+                  placeholder="Ex: 11122233344"
+                  required
+                />
+              </div>
+              <!-- Input: RG -->
+              <div class="flex flex-col gap-1">
+                <label for="rg">RG</label>
+                <input
+                  class="bg-[#F5F5F5] w-22 rounded p-2 text-slate-700 placeholder:text-[#767676]"
+                  type="number"
+                  name="rg"
+                  id="rg"
+                  placeholder="Ex: 556667778"
+                  required
+                />
+              </div>
+            </div>
+            <div class="flex items-center gap-2">
+              <!-- Input: Endereço -->
+              <div class="flex flex-col gap-1">
+                <label for="endereco">Endereço</label>
+                <input
+                  class="bg-[#F5F5F5] w-22 rounded p-2 text-slate-700 placeholder:text-[#767676]"
+                  type="text"
+                  name="endereco"
+                  id="endereco"
+                  placeholder="Ex: R Jardim das Flores"
+                  required
+                />
+              </div>
+              <!-- Input: CEP -->
+              <div class="flex flex-col gap-1">
+                <label for="cep">CEP</label>
+                <input
+                  class="bg-[#F5F5F5] w-22 rounded p-2 placeholder:text-[#767676] text-slate-700"
+                  type="number"
+                  name="cep"
+                  id="cep"
+                  placeholder="Ex: 11122233344"
+                  required
+                />
+              </div>
+            </div>
+            <div class="flex items-center gap-2">
+              <!-- Input: Senha -->
+              <div class="flex flex-col gap-1">
+                <label for="senha">Senha</label>
+                <input
+                  class="bg-[#F5F5F5] w-22 rounded p-2 text-slate-700 placeholder:text-[#767676]"
+                  type="text"
+                  name="senha"
+                  id="senha"
+                  placeholder="Ex: minhasenha123!"
+                  required
+                />
+              </div>
+              <!-- Input: Confirmar Senha -->
+              <div class="flex flex-col gap-1">
+                <label for="confirmarSenha">Confirmar senha</label>
+                <input
+                  class="bg-[#F5F5F5] w-22 rounded p-2 placeholder:text-[#767676] text-slate-700"
+                  type="text"
+                  name="sobrenome"
+                  id="sobrenome"
+                  placeholder="Ex: minhasenha123!"
+                  required
+                />
+              </div>
+            </div>
+            <div>
+              <p>Sua senha deve conter pelo menos:</p>
+              <ul class="font-bold list-disc">
+                <div class="ml-10">
+                  <li>Oito dígitos</li>
+                  <li>Um número</li>
+                  <li>Um caractere especial</li>
+                </div>
+              </ul>
+            </div>
+            <!-- Botão de submit -->
+            <button
+              id="entrar"
+              class="flex items-center font-bold w-100 h-12 rounded justify-center bg-[#3A567E] text-[#F8F8F8]"
+              type="submit"
+            >
+              Entrar
+            </button>
+          </div>
+        </form>
+
+        <!-- Linha separadora -->
+        <hr class="w-72 border-[#6B8BBA] mt-2"/>
+
+        <p>
+          Ja possui uma conta?
+          <a class="underline font-bold" href="login.html">Entre!</a>
+        </p>
+      </div>
+    </main>
+    <footer class="bg-[#9DB9E3]">
+      <p class="flex justify-center font-regular text-lg text-[#F8F8F8]">Desenvolvido pela equipe da TechNourish | 2023 ©</p>
+    </footer>
+  </body>
+</html>
